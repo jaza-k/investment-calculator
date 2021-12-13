@@ -2,6 +2,9 @@ package application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import model.*;
 
 public class GoalsController {
 	
@@ -12,7 +15,15 @@ public class GoalsController {
 	}
 
     @FXML
+    private TextField savingsGoalAmount;
+
+    @FXML
+    private Button calculateGoalsButton;
+
+
+    @FXML
     void getGoalsDashboard(ActionEvent event) {
+    	Factory.getInstance().setGoal(Double.parseDouble(savingsGoalAmount.getText()));
     	app.goalsDashboardView();
     }
 

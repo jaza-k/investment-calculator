@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import model.*;
 
 public class EarningsController {
 	private static InvestmentApp app;
@@ -24,6 +25,8 @@ public class EarningsController {
 
     @FXML
     void getEarningsDashboard(ActionEvent event) {
+    	Factory.getInstance().setMonthlyContributions(Double.parseDouble(monthlyContributionAmount.getText()));
+    	Factory.getInstance().setCompoundPeriod(compoundPeriodChoice.getValue());
     	app.earningsDashboardView();
     }
 
