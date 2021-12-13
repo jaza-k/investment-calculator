@@ -57,14 +57,13 @@ public class GoalsDashboardController {
     	monthlyAmountNeeded.setText("" + Factory.getInstance().createGoals());
     	chartHelper();
     }
+    
     private void chartHelper() {
-    	LineChart<Number, Number> linechart = new LineChart<Number, Number>(xAxis, yAxis);
     	XYChart.Series<Number, Number> data = new Series<Number, Number>();
     	for (int i = 0; i <= Factory.getInstance().getEndingAge() - Factory.getInstance().getCurrentAge(); i+=2) {
-    		data.getData().add(new XYChart.Data(i, Factory.getInstance().specificYear(i)));
+    		data.getData().add(new Data<Number, Number>(i, Factory.getInstance().specificYearGoal(i)));
     	}
-    	linechart.getData().add(data);
-    	lineChart = linechart;
+    	this.lineChart.getData().add(data);
     }
 
 }

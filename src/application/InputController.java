@@ -1,5 +1,13 @@
 package application;
 
+/**
+ * InputController class which loads the second scene of the application
+ * 
+ * @author Jaza Khan
+ * @author Richi Patel
+ *
+ */
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -9,6 +17,7 @@ import model.*;
 
 public class InputController {
 	
+	/** InvestmentApp instance variable to link files */
 	static InvestmentApp app;
 
 	public void linkWithApplication(InvestmentApp app) {
@@ -43,18 +52,21 @@ public class InputController {
     
     @FXML
     void loadEarningsView(ActionEvent event) {
-    	Factory.getInstance().setStartingAmount(Double.parseDouble(currentSavingsTextfield.getText()));
-    	Factory.getInstance().setEndingAge(Integer.parseInt(retirementCashOutAgeTextfield.getText()));
-    	Factory.getInstance().setInterest(Double.parseDouble(annualInterestTextfield.getText()));
+    	setFactoryVariables();
     	app.earningsInputView();
     }
 
     @FXML
     void loadGoalView(ActionEvent event) {
+    	setFactoryVariables();
+    	app.goalsInputView();
+    }
+    
+    
+    void setFactoryVariables() {
     	Factory.getInstance().setStartingAmount(Double.parseDouble(currentSavingsTextfield.getText()));
     	Factory.getInstance().setEndingAge(Integer.parseInt(retirementCashOutAgeTextfield.getText()));
     	Factory.getInstance().setInterest(Double.parseDouble(annualInterestTextfield.getText()));
-    	app.goalsInputView();
     }
 
 }

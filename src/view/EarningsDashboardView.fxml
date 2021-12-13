@@ -63,7 +63,11 @@
             </Label>
             <LineChart fx:id="lineChart" horizontalGridLinesVisible="false" layoutX="62.0" layoutY="40.0" legendVisible="false" prefHeight="329.0" prefWidth="377.0" style="-fx-background-color: white; -fx-background-radius: 10;" title="Your Investment">
               <xAxis>
-                <CategoryAxis label="Time" side="BOTTOM" fx:id="xAxis" />
+                <NumberAxis fx:id="yAxis" label="Amount" minorTickVisible="false" side="LEFT" tickLabelFill="#35c1f8">
+                     <tickLabelFont>
+                        <Font size="13.0" />
+                     </tickLabelFont>
+                  </NumberAxis>
               </xAxis>
               <yAxis>
                 <NumberAxis fx:id="yAxis" label="Amount" minorTickVisible="false" side="LEFT" tickLabelFill="#35c1f8">

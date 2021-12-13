@@ -26,13 +26,13 @@ public class EarningsDashboardController {
     private Label goalAge;
 
     @FXML
-    private LineChart<?, ?> lineChart;
+    private LineChart<Number, Number> lineChart;
 
     @FXML
     private Label userName;
 
     @FXML
-    private CategoryAxis xAxis;
+    private NumberAxis xAxis;
 
     @FXML
     private NumberAxis yAxis;

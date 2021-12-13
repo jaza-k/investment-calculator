@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
@@ -10,8 +9,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane prefHeight="538.0" prefWidth="500.0" style="-fx-background-color: #040932;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="application.GoalsDashboardController">
+<BorderPane prefHeight="538.0" prefWidth="500.0" style="-fx-background-color: #040932;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GoalsDashboardController">
    <top>
       <AnchorPane prefHeight="75.0" prefWidth="500.0" BorderPane.alignment="CENTER">
          <children>
@@ -77,16 +75,16 @@
                </padding>
             </Label>
             <Label layoutX="288.0" layoutY="39.0" text="years of age" textFill="WHITE" />
-            <LineChart fx:id="lineChart" horizontalGridLinesVisible="false" layoutX="52.0" layoutY="80.0" legendVisible="false" prefHeight="292.0" prefWidth="388.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" title="Your Investment">
+            <LineChart fx:id="lineChart" horizontalGridLinesVisible="false" layoutX="52.0" layoutY="80.0" legendVisible="false" prefHeight="292.0" prefWidth="388.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" title="Your Investment" verticalGridLinesVisible="false">
               <xAxis>
-                <CategoryAxis label="Time" prefWidth="318.0" side="BOTTOM" tickLabelFill="WHITE" fx:id="xAxis">
+                <NumberAxis label="Time" minorTickVisible="false" prefHeight="49.0" prefWidth="292.0" side="BOTTOM" tickLabelFill="#35c1f8" tickLength="5.0" upperBound="150.0" fx:id="xAxis">
                      <tickLabelFont>
                         <Font size="13.0" />
                      </tickLabelFont>
-                  </CategoryAxis>
+                  </NumberAxis>
               </xAxis>
               <yAxis>
-                <NumberAxis fx:id="yAxis" label="Amount" minorTickVisible="false" prefHeight="211.0" prefWidth="53.0" side="LEFT" tickLabelFill="#35c1f8" tickLength="5.0" upperBound="150.0">
+                <NumberAxis fx:id="yAxis" label="Amount" minorTickVisible="false" prefHeight="189.0" prefWidth="56.0" side="LEFT" tickLabelFill="#35c1f8" tickLength="5.0" upperBound="150.0">
                      <tickLabelFont>
                         <Font size="13.0" />
                      </tickLabelFont>
