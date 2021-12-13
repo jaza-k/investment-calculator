@@ -7,6 +7,8 @@ import java.text.NumberFormat;
  * users and calculates the monthly contributions
  * 
  * @author Joshua Lee
+ * @author Jaza Khan
+ * @author Richi Patel
  */
 public class Goals extends Input {
 	private double goal;
