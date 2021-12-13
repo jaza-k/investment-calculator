@@ -76,7 +76,7 @@ public class Goals extends Input {
 		// calculates the compound interest, P*a
 		double compoundInterest = super.getCurrentSavings() * accumulation;
 		
-		// calculates the yearly contributions, (r * (A - P*a) + 1)/a
+		// calculates the monthly contributions, (r * (A - P*a) + 1)/a
 		double monthlyContributions = ((super.getInterestRate() * (goal - compoundInterest))/(accumulation - 1));
 		
 		// round the number to two decimals
