@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
@@ -49,7 +48,7 @@
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="94.0" layoutY="7.0" text="You will have saved $" textFill="WHITE" />
-            <Label fx:id="amountSaved" layoutX="220.0" layoutY="7.0" prefHeight="15.0" prefWidth="55.0" text="14,673" textFill="#51cbff">
+            <Label fx:id="amountSaved" layoutX="206.0" layoutY="7.0" prefHeight="15.0" prefWidth="55.0" text="14,673" textFill="#51cbff">
                <padding>
                   <Insets left="3.0" />
                </padding>
@@ -63,14 +62,14 @@
             </Label>
             <LineChart fx:id="lineChart" horizontalGridLinesVisible="false" layoutX="62.0" layoutY="40.0" legendVisible="false" prefHeight="329.0" prefWidth="377.0" style="-fx-background-color: white; -fx-background-radius: 10;" title="Your Investment">
               <xAxis>
-                <NumberAxis fx:id="yAxis" label="Amount" minorTickVisible="false" side="LEFT" tickLabelFill="#35c1f8">
+                <NumberAxis fx:id="yAxis" label="Time (years)" minorTickVisible="false" side="LEFT" tickLabelFill="#35c1f8">
                      <tickLabelFont>
                         <Font size="13.0" />
                      </tickLabelFont>
                   </NumberAxis>
               </xAxis>
               <yAxis>
-                <NumberAxis fx:id="yAxis" label="Amount" minorTickVisible="false" side="LEFT" tickLabelFill="#35c1f8">
+                <NumberAxis fx:id="yAxis" label="Amount ($)" minorTickVisible="false" side="LEFT" tickLabelFill="#35c1f8">
                      <tickLabelFont>
                         <Font size="13.0" />
                      </tickLabelFont>
