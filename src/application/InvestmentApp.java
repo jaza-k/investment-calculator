@@ -57,9 +57,9 @@ public class InvestmentApp extends Application {
 			BorderPane root = new BorderPane();
 			FXMLLoader loader = new FXMLLoader();
 			Scene scene;
+			root = (BorderPane)loader.load(new FileInputStream("src/view/EarningsView.fxml"));
 			EarningsController earningsController = loader.getController();
 			earningsController.linkWithApplication(this);
-			root = (BorderPane)loader.load(new FileInputStream("src/view/EarningsView.fxml"));
 	        scene = new Scene(root, 530,215);
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
@@ -73,9 +73,9 @@ public class InvestmentApp extends Application {
 			BorderPane root = new BorderPane();
 			FXMLLoader loader = new FXMLLoader();
 			Scene scene;
+			root = (BorderPane)loader.load(new FileInputStream("src/view/GoalsView.fxml"));
 			GoalsController goalsController = loader.getController();
 			goalsController.linkWithApplication(this);
-			root = (BorderPane)loader.load(new FileInputStream("src/view/GoalsView.fxml"));
 	        scene = new Scene(root, 550,190);
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
@@ -89,9 +89,9 @@ public class InvestmentApp extends Application {
 			BorderPane root = new BorderPane();
 			FXMLLoader loader = new FXMLLoader();
 			Scene scene;
+			root = (BorderPane)loader.load(new FileInputStream("src/view/EarningsDashboardView.fxml"));
 			EarningsDashboardController earningsDashboardController = loader.getController();
 			earningsDashboardController.linkWithApplication(this);
-			root = (BorderPane)loader.load(new FileInputStream("src/view/EarningsDashboardView.fxml"));
 	        scene = new Scene(root, 550,500);
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
@@ -105,9 +105,9 @@ public class InvestmentApp extends Application {
 			BorderPane root = new BorderPane();
 			FXMLLoader loader = new FXMLLoader();
 			Scene scene;
+			root = (BorderPane)loader.load(new FileInputStream("src/view/GoalsDashboardView.fxml"));
 			GoalsDashboardController goalsDashboardController = loader.getController();
 			goalsDashboardController.linkWithApplication(this);
-			root = (BorderPane)loader.load(new FileInputStream("src/view/GoalsDashboardView.fxml"));
 	        scene = new Scene(root, 550,500);
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
