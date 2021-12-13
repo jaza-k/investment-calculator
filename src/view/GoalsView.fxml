@@ -17,7 +17,7 @@
       </Button>
    </bottom>
    <center>
-      <FlowPane fx:id="savingsGoalAmount" maxWidth="591.0" prefHeight="274.0" prefWidth="591.0" BorderPane.alignment="CENTER">
+      <FlowPane maxWidth="591.0" prefHeight="274.0" prefWidth="591.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="How much do you want to have saved by your desired age?" textFill="WHITE">
                <FlowPane.margin>
