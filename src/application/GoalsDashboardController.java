@@ -10,7 +10,7 @@ import javafx.scene.chart.XYChart.Data;
 import javafx.scene.chart.XYChart.Series;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import model.Factory;
+import model.Creator;
 
 public class GoalsDashboardController {
 
@@ -33,10 +33,10 @@ public class GoalsDashboardController {
     private Label userName;
 
     @FXML
-    private NumberAxis xAxis = new NumberAxis(0, Factory.getInstance().getEndingAge() - Factory.getInstance().getCurrentAge(), 2);
+    private NumberAxis xAxis = new NumberAxis(0, Creator.getInstance().getEndingAge() - Creator.getInstance().getCurrentAge(), 2);
 
     @FXML
-    private NumberAxis yAxis = new NumberAxis(Factory.getInstance().getStartingAmount(), Factory.getInstance().createGoals(), 0.1 * (Factory.getInstance().createGoals() - Factory.getInstance().getStartingAmount()));
+    private NumberAxis yAxis = new NumberAxis(Creator.getInstance().getStartingAmount(), Creator.getInstance().createGoals(), 0.1 * (Creator.getInstance().createGoals() - Creator.getInstance().getStartingAmount()));
 
     @FXML
     private Label goalAge;
@@ -51,17 +51,17 @@ public class GoalsDashboardController {
     
     @FXML
     void initialize() {
-    	userName.setText(Factory.getInstance().getName());
-    	goalAge.setText("" + Factory.getInstance().getEndingAge());
-    	goalSavingsAmount.setText("" + Factory.getInstance().getGoal());
-    	monthlyAmountNeeded.setText("" + Factory.getInstance().createGoals());
+    	userName.setText(Creator.getInstance().getName());
+    	goalAge.setText("" + Creator.getInstance().getEndingAge());
+    	goalSavingsAmount.setText("" + Creator.getInstance().getGoal());
+    	monthlyAmountNeeded.setText("" + Creator.getInstance().createGoals());
     	chartHelper();
     }
     
     private void chartHelper() {
     	XYChart.Series<Number, Number> data = new Series<Number, Number>();
-    	for (int i = 0; i <= Factory.getInstance().getEndingAge() - Factory.getInstance().getCurrentAge(); i+=2) {
-    		data.getData().add(new Data<Number, Number>(i, Factory.getInstance().specificYearGoal(i)));
+    	for (int i = 0; i <= Creator.getInstance().getEndingAge() - Creator.getInstance().getCurrentAge(); i+=2) {
+    		data.getData().add(new Data<Number, Number>(i, Creator.getInstance().specificYearGoal(i)));
     	}
     	this.lineChart.getData().add(data);
     }

@@ -43,7 +43,7 @@ public class GoalsController {
      */
     @FXML
     void getGoalsDashboard(ActionEvent event) {
-    	Factory.getInstance().setGoal(Double.parseDouble(savingsGoalAmount.getText()));
+    	Creator.getInstance().setGoal(Double.parseDouble(savingsGoalAmount.getText()));
     	app.goalsDashboardView();
     }
     

@@ -13,7 +13,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import model.Factory;
+import model.Creator;
 
 public class SetupController {
 	
@@ -53,8 +53,8 @@ public class SetupController {
 	 */
     @FXML
     void loadInputView(ActionEvent event) {
-    	Factory.getInstance().setCurrentAge(Integer.parseInt(ageTextfield.getText()));
-    	Factory.getInstance().setName(nameTextfield.getText());
+    	Creator.getInstance().setCurrentAge(Integer.parseInt(ageTextfield.getText()));
+    	Creator.getInstance().setName(nameTextfield.getText());
     	app.inputView();
     }
 

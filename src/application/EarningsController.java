@@ -50,8 +50,8 @@ public class EarningsController {
      */
     @FXML
     void getEarningsDashboard(ActionEvent event) {
-    	Factory.getInstance().setMonthlyContributions(Double.parseDouble(monthlyContributionAmount.getText()));
-    	Factory.getInstance().setCompoundPeriod(compoundPeriodChoice.getValue());
+    	Creator.getInstance().setMonthlyContributions(Double.parseDouble(monthlyContributionAmount.getText()));
+    	Creator.getInstance().setCompoundPeriod(compoundPeriodChoice.getValue());
     	app.earningsDashboardView();
     }
     

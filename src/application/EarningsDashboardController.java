@@ -2,11 +2,12 @@ package application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import model.Factory;
+import model.Creator;
 
 public class EarningsDashboardController {
 	private static InvestmentApp app;
@@ -43,9 +44,9 @@ public class EarningsDashboardController {
     
     @FXML
     void initialize() {
-    	userName.setText(Factory.getInstance().getName());
-    	goalAge.setText("" + Factory.getInstance().getEndingAge());
-    	amountSaved.setText("" + Factory.getInstance().createGoals());
+    	userName.setText(Creator.getInstance().getName());
+    	goalAge.setText("" + Creator.getInstance().getEndingAge());
+    	amountSaved.setText("" + Creator.getInstance().createGoals());
     }
 }
 
