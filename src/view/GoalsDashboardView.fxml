@@ -61,7 +61,7 @@
                </padding>
             </Label>
             <Label layoutX="141.0" layoutY="39.0" text="of $" textFill="WHITE" />
-            <Label layoutX="163.0" layoutY="39.0" text="23,500" textFill="#51cbff">
+            <Label fx:id="goalSavingsAmount" layoutX="163.0" layoutY="39.0" text="23,500" textFill="#51cbff">
                <padding>
                   <Insets left="2.0" />
                </padding>
@@ -71,7 +71,7 @@
                   <Insets left="2.0" />
                </padding>
             </Label>
-            <Label layoutX="262.0" layoutY="39.0" text="35" textFill="#51cbff">
+            <Label fx:id="goalAge" layoutX="262.0" layoutY="39.0" text="35" textFill="#51cbff">
                <padding>
                   <Insets left="5.0" />
                </padding>
