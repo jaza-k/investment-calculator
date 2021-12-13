@@ -65,8 +65,8 @@
    <bottom>
       <AnchorPane prefHeight="76.0" prefWidth="527.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="calculateEarningsButton" layoutX="218.0" layoutY="21.0" mnemonicParsing="false" onAction="#getEarningsDashboard" prefHeight="34.0" prefWidth="92.0" style="-fx-background-color: #35c1f8;" text="Calculate" textFill="WHITE" />
-            <Button fx:id="goBackButton" layoutX="27.0" layoutY="28.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #35c1f8;" text="Go back" textFill="WHITE" />
+            <Button fx:id="calculateEarningsButton" layoutX="218.0" layoutY="21.0" mnemonicParsing="false" onAction="#getEarningsDashboard" prefHeight="34.0" prefWidth="92.0" style="-fx-background-color: #35c1f8; -fx-background-radius: 10;" text="Calculate" textFill="WHITE" />
+            <Button fx:id="goBackButton" layoutX="27.0" layoutY="28.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #35c1f8; -fx-background-radius: 10;" text="Go back" textFill="WHITE" />
          </children>
       </AnchorPane>
    </bottom>
