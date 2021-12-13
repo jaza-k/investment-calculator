@@ -53,7 +53,7 @@
                   <Insets left="2.0" />
                </padding>
             </Label>
-            <Label layoutX="252.0" layoutY="14.0" text="each month to reach your goal" textFill="WHITE">
+            <Label layoutX="270.0" layoutY="14.0" text="each month to reach your goal" textFill="WHITE">
                <padding>
                   <Insets left="5.0" />
                </padding>
@@ -64,27 +64,27 @@
                   <Insets left="2.0" />
                </padding>
             </Label>
-            <Label layoutX="209.0" layoutY="39.0" text="saved by" textFill="WHITE">
+            <Label layoutX="219.0" layoutY="39.0" text="saved by" textFill="WHITE">
                <padding>
                   <Insets left="2.0" />
                </padding>
             </Label>
-            <Label fx:id="goalAge" layoutX="262.0" layoutY="39.0" text="35" textFill="#51cbff">
+            <Label fx:id="goalAge" layoutX="274.0" layoutY="39.0" text="35" textFill="#51cbff">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <Label layoutX="288.0" layoutY="39.0" text="years of age" textFill="WHITE" />
+            <Label layoutX="302.0" layoutY="39.0" text="years of age" textFill="WHITE" />
             <LineChart fx:id="lineChart" horizontalGridLinesVisible="false" layoutX="52.0" layoutY="80.0" legendVisible="false" prefHeight="292.0" prefWidth="388.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" title="Your Investment" verticalGridLinesVisible="false">
               <xAxis>
-                <NumberAxis label="Time" minorTickVisible="false" prefHeight="49.0" prefWidth="292.0" side="BOTTOM" tickLabelFill="#35c1f8" tickLength="5.0" upperBound="150.0" fx:id="xAxis">
+                <NumberAxis label="Time (years)" minorTickVisible="false" prefHeight="49.0" prefWidth="292.0" side="BOTTOM" tickLabelFill="#35c1f8" tickLength="5.0" upperBound="150.0" fx:id="xAxis">
                      <tickLabelFont>
                         <Font size="13.0" />
                      </tickLabelFont>
                   </NumberAxis>
               </xAxis>
               <yAxis>
-                <NumberAxis fx:id="yAxis" label="Amount" minorTickVisible="false" prefHeight="189.0" prefWidth="56.0" side="LEFT" tickLabelFill="#35c1f8" tickLength="5.0" upperBound="150.0">
+                <NumberAxis fx:id="yAxis" label="Amount ($)" minorTickVisible="false" prefHeight="189.0" prefWidth="56.0" side="LEFT" tickLabelFill="#35c1f8" tickLength="5.0" upperBound="150.0">
                      <tickLabelFont>
                         <Font size="13.0" />
                      </tickLabelFont>
