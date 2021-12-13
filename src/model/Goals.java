@@ -6,11 +6,7 @@ import java.text.NumberFormat;
 /**
  * This class represents the retirement goal of the
  * users and calculates the monthly contributions
-<<<<<<< Updated upstream
  * It is a child class to the Input class
-=======
- * Child class to the Input class
->>>>>>> Stashed changes
  * 
  * @author Joshua Lee
  * @author Jaza Khan

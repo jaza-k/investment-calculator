@@ -3,11 +3,7 @@ package model;
 import static java.lang.Math.pow;
 /**
  * Earnings class is used to calculate total earnings of an investment with monthly contributions
-<<<<<<< Updated upstream
  * it is a child class to the Input class
-=======
- * A child class to the Input class
->>>>>>> Stashed changes
  * 
  * @author Richi, Josh, Jaza
  * 
@@ -113,8 +109,4 @@ public class Earnings extends Input{
 		earnings = Math.round(earnings * 100.0) / 100.0;
 		return earnings;
 	}
-<<<<<<< Updated upstream
-=======
-	
->>>>>>> Stashed changes
 }
