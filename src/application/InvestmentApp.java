@@ -31,7 +31,8 @@ public class InvestmentApp extends Application {
 			e.printStackTrace();
 		} 
 		catch (IOException e) {
-			e.printStackTrace();
+			e.printStackTrace();SetupController setupController = loader.getController();
+			setupController.linkWithApplication(this);
 		}
 	}
 
@@ -41,6 +42,8 @@ public class InvestmentApp extends Application {
 			FXMLLoader loader = new FXMLLoader();
 			Scene scene;
 			root = (BorderPane)loader.load(new FileInputStream("src/view/InputView.fxml"));
+			InputController inputController = loader.getController();
+			inputController.linkWithApplication(this);
 	        scene = new Scene(root, 700,520);
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
@@ -49,13 +52,15 @@ public class InvestmentApp extends Application {
 		}
 	}
 	
-	void earningsView() {
+	void earningsInputView() {
 		try {
 			BorderPane root = new BorderPane();
 			FXMLLoader loader = new FXMLLoader();
 			Scene scene;
+			EarningsController earningsController = loader.getController();
+			earningsController.linkWithApplication(this);
 			root = (BorderPane)loader.load(new FileInputStream("src/view/EarningsView.fxml"));
-	        scene = new Scene(root, 500,500);
+	        scene = new Scene(root, 530,215);
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
 		} catch (IOException e) {
@@ -63,13 +68,47 @@ public class InvestmentApp extends Application {
 		}
 	}
 	
-	void goalsView() {
+	void goalsInputView() {
 		try {
 			BorderPane root = new BorderPane();
 			FXMLLoader loader = new FXMLLoader();
 			Scene scene;
+			GoalsController goalsController = loader.getController();
+			goalsController.linkWithApplication(this);
 			root = (BorderPane)loader.load(new FileInputStream("src/view/GoalsView.fxml"));
-	        scene = new Scene(root, 500,500);
+	        scene = new Scene(root, 550,190);
+	        primaryStage.setScene(scene);
+	        primaryStage.show();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	void earningsDashboardView() {
+		try {
+			BorderPane root = new BorderPane();
+			FXMLLoader loader = new FXMLLoader();
+			Scene scene;
+			EarningsDashboardController earningsDashboardController = loader.getController();
+			earningsDashboardController.linkWithApplication(this);
+			root = (BorderPane)loader.load(new FileInputStream("src/view/EarningsDashboardView.fxml"));
+	        scene = new Scene(root, 550,500);
+	        primaryStage.setScene(scene);
+	        primaryStage.show();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	void goalsDashboardView() {
+		try {
+			BorderPane root = new BorderPane();
+			FXMLLoader loader = new FXMLLoader();
+			Scene scene;
+			GoalsDashboardController goalsDashboardController = loader.getController();
+			goalsDashboardController.linkWithApplication(this);
+			root = (BorderPane)loader.load(new FileInputStream("src/view/GoalsDashboardView.fxml"));
+	        scene = new Scene(root, 550,500);
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
 		} catch (IOException e) {

@@ -1,20 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #040932;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+<BorderPane maxHeight="250.0" prefHeight="150.0" prefWidth="527.0" style="-fx-background-color: #040932;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="application.EarningsController">
    <top>
-      <Label alignment="TOP_LEFT" text="Here is your dashboard" textFill="#51cbff" BorderPane.alignment="CENTER">
+      <Label alignment="TOP_LEFT" text="Just a couple more things..." textFill="#51cbff" BorderPane.alignment="TOP_LEFT">
          <BorderPane.margin>
-            <Insets right="300.0" top="15.0" />
+            <Insets top="5.0" />
          </BorderPane.margin>
          <font>
             <Font size="15.0" />
          </font>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
       </Label>
    </top>
+   <bottom>
+      <Button fx:id="calculateEarningsButton" mnemonicParsing="false" onAction="#getEarningsDashboard" prefHeight="34.0" prefWidth="92.0" style="-fx-background-color: #35c1f8;" text="Calculate" textFill="WHITE" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+   <center>
+      <BorderPane maxHeight="150.0" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <FlowPane prefHeight="39.0" prefWidth="477.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="What is your monthly contribution amount?" textFill="WHITE">
+                     <FlowPane.margin>
+                        <Insets right="15.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <TextField fx:id="monthlyContributionAmount" promptText="Contribution amount" />
+               </children>
+               <BorderPane.margin>
+                  <Insets left="50.0" top="20.0" />
+               </BorderPane.margin>
+            </FlowPane>
+         </top>
+         <center>
+            <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Select a compounding period: " textFill="WHITE">
+                     <FlowPane.margin>
+                        <Insets bottom="20.0" right="20.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <ChoiceBox fx:id="compoundPeriodChoice" prefWidth="150.0">
+                     <FlowPane.margin>
+                        <Insets bottom="20.0" />
+                     </FlowPane.margin>
+                  </ChoiceBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="100.0" />
+               </BorderPane.margin>
+            </FlowPane>
+         </center>
+      </BorderPane>
+   </center>
 </BorderPane>
