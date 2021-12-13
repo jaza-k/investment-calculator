@@ -3,6 +3,7 @@ package model;
 import static java.lang.Math.pow;
 /**
  * Earnings class is used to calculate total earnings of an investment with monthly contributions
+ * it is a child class to the Input class
  * 
  * @author Richi, Josh, Jaza
  * 
@@ -107,12 +108,5 @@ public class Earnings extends Input{
 		//rounds to 2 decimal places
 		earnings = Math.round(earnings * 100.0) / 100.0;
 		return earnings;
-	}
-	
-	//for testing only
-	public static void main(String args[]) {
-		Earnings earning = new Earnings(5, 5000, 100, "Quarterly");
-		earning.yearsElapsed(20, 30);
-		System.out.println(earning.calculateAnnualEarnings());
 	}
 }

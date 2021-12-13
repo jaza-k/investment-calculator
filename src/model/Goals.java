@@ -1,10 +1,12 @@
 package model;
 
+
 import java.text.NumberFormat;
 
 /**
  * This class represents the retirement goal of the
  * users and calculates the monthly contributions
+ * It is a child class to the Input class
  * 
  * @author Joshua Lee
  * @author Jaza Khan
