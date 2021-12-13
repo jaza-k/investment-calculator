@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="550.0" prefWidth="500.0" style="-fx-background-color: #040932;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GoalsDashboardController">
+<BorderPane prefHeight="538.0" prefWidth="500.0" style="-fx-background-color: #040932;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GoalsDashboardController">
    <top>
-      <AnchorPane prefHeight="62.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="75.0" prefWidth="500.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Welcome," textFill="#51cbff">
                <font>
@@ -35,15 +35,12 @@
                </padding>
             </Label>
          </children>
-         <padding>
-            <Insets left="12.0" right="12.0" top="12.0" />
-         </padding>
       </AnchorPane>
    </top>
    <bottom>
       <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#goBack" prefHeight="29.0" prefWidth="86.0" style="-fx-background-color: #35c1f8; -fx-background-radius: 10;" text="Go back" textFill="WHITE" BorderPane.alignment="BOTTOM_CENTER">
          <BorderPane.margin>
-            <Insets bottom="25.0" />
+            <Insets bottom="20.0" />
          </BorderPane.margin>
       </Button>
    </bottom>
@@ -57,13 +54,12 @@
                </padding>
             </Label>
             <Label layoutX="270.0" layoutY="14.0" text="each month to reach your goal" textFill="WHITE">
-            <Label layoutX="272.0" layoutY="14.0" text="each month to reach your goal" textFill="WHITE">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <Label layoutX="146.0" layoutY="39.0" text="of $" textFill="WHITE" />
-            <Label fx:id="goalSavingsAmount" layoutX="168.0" layoutY="39.0" text="23,500" textFill="#51cbff">
+            <Label layoutX="141.0" layoutY="39.0" text="of $" textFill="WHITE" />
+            <Label fx:id="goalSavingsAmount" layoutX="163.0" layoutY="39.0" text="23,500" textFill="#51cbff">
                <padding>
                   <Insets left="2.0" />
                </padding>
@@ -74,13 +70,11 @@
                </padding>
             </Label>
             <Label fx:id="goalAge" layoutX="274.0" layoutY="39.0" text="35" textFill="#51cbff">
-            <Label fx:id="goalAge" layoutX="272.0" layoutY="39.0" text="35" textFill="#51cbff">
                <padding>
                   <Insets left="5.0" />
                </padding>
             </Label>
             <Label layoutX="302.0" layoutY="39.0" text="years of age" textFill="WHITE" />
-            <Label layoutX="297.0" layoutY="39.0" text="years of age" textFill="WHITE" />
             <LineChart fx:id="lineChart" horizontalGridLinesVisible="false" layoutX="52.0" layoutY="80.0" legendVisible="false" prefHeight="292.0" prefWidth="388.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" title="Your Investment" verticalGridLinesVisible="false">
               <xAxis>
                 <NumberAxis label="Time (years)" minorTickVisible="false" prefHeight="49.0" prefWidth="292.0" side="BOTTOM" tickLabelFill="#35c1f8" tickLength="5.0" upperBound="150.0" fx:id="xAxis">
