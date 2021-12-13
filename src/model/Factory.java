@@ -94,4 +94,11 @@ public class Factory {
 		goal.yearsElapsed(currentAge, endingAge);
 		return goal.calcContributions();
 	}
+	
+	public double specificYear(int year) {
+		Goals goal = new Goals(interest, startingAmount, this.goal);
+		goal.yearsElapsed(0, year);
+		return goal.calcContributions();
+	}
+	
 }
