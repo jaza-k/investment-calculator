@@ -16,7 +16,7 @@ public class GoalsDashboardController {
 		GoalsDashboardController.app = app;
 	}
 
-  @FXML
+	@FXML
     private Button goBackButton;
 
     @FXML
@@ -35,8 +35,19 @@ public class GoalsDashboardController {
     private NumberAxis yAxis;
 
     @FXML
-    void goBack(ActionEvent event) {
+    private Label goalAge;
 
+    @FXML
+    private Label goalSavingsAmount;
+    
+    @FXML
+    void goBack(ActionEvent event) {
+    	app.goalsInputView();
+    }
+    
+    @FXML
+    void initialize() {
+    	
     }
 
 }
