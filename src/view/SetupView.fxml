@@ -54,7 +54,7 @@
             <TextField fx:id="ageTextfield" prefWidth="50.0" promptText="Age" />
             <Button fx:id="continueButton" mnemonicParsing="false" onAction="#loadInputView" prefHeight="39.0" prefWidth="146.0" style="-fx-background-color: #51cbff;" text="Continue">
                <FlowPane.margin>
-                  <Insets left="180.0" top="20.0" />
+                  <Insets bottom="40.0" left="180.0" top="30.0" />
                </FlowPane.margin>
             </Button>
          </children>
