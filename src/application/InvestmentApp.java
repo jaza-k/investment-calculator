@@ -41,7 +41,7 @@ public class InvestmentApp extends Application {
 			FXMLLoader loader = new FXMLLoader();
 			Scene scene;
 			root = (BorderPane)loader.load(new FileInputStream("src/view/InputView.fxml"));
-	        scene = new Scene(root, 500,500);
+	        scene = new Scene(root, 700,520);
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
 		} catch (IOException e) {
