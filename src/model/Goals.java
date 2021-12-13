@@ -69,16 +69,16 @@ public class Goals extends Input {
 	 */
 	public double calcContributions() {
 		// calculates the accumulation a = (1 + r)^t
-		double accumulation = Math.pow((1 + super.getInterestRate()), super.getTimeElapsed());
+		double accumulation = Math.pow((1 + (super.getInterestRate()/12)), super.getTimeElapsed() * 12);
 		
 		// calculates the compound interest, P*a
 		double compoundInterest = super.getCurrentSavings() * accumulation;
 		
-		// calculates the yearly contributions, (r * (A - P*a) + 1)/a
-		double yearlyContributions = ((super.getInterestRate() * (goal - compoundInterest)) + 1)/accumulation;
+		// calculates the monthly contributions, (r * (A - P*a) + 1)/a
+		double monthlyContributions = ((super.getInterestRate() * (goal - compoundInterest))/(accumulation - 1));
 		
-		// divides by 12 to get monthly
-		double monthlyContributions = yearlyContributions/12;
+		// round the number to two decimals
+		monthlyContributions = Math.round(monthlyContributions * 100.0) / 100.0;
 		
 		return monthlyContributions;
 	}

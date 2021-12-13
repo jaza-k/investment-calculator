@@ -16,6 +16,9 @@ public class InputController {
 	}
 
     @FXML
+    private Button goBackButton;
+
+    @FXML
     private TextField annualInterestTextfield;
 
     @FXML
@@ -32,7 +35,12 @@ public class InputController {
 
     @FXML
     private TextField currentSavingsTextfield;
-
+    
+    @FXML
+    void goBack(ActionEvent event) {
+    	app.setupView();
+    }
+    
     @FXML
     void loadEarningsView(ActionEvent event) {
     	Factory.getInstance().setStartingAmount(Double.parseDouble(currentSavingsTextfield.getText()));

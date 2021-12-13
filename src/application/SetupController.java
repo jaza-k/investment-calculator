@@ -30,6 +30,7 @@ public class SetupController {
     @FXML
     void loadInputView(ActionEvent event) {
     	Factory.getInstance().setCurrentAge(Integer.parseInt(ageTextfield.getText()));
+    	Factory.getInstance().setName(nameTextfield.getText());
     	app.inputView();
     }
 

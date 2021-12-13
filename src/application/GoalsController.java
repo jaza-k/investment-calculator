@@ -19,12 +19,19 @@ public class GoalsController {
 
     @FXML
     private Button calculateGoalsButton;
-
+    
+    @FXML
+    private Button goBackButton;
 
     @FXML
     void getGoalsDashboard(ActionEvent event) {
     	Factory.getInstance().setGoal(Double.parseDouble(savingsGoalAmount.getText()));
     	app.goalsDashboardView();
+    }
+
+    @FXML
+    void goBack(ActionEvent event) {
+    	app.inputView();
     }
 
 }

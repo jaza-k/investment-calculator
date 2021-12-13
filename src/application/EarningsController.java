@@ -1,5 +1,6 @@
 package application;
 
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -15,6 +16,9 @@ public class EarningsController {
 	}
 
     @FXML
+    private Button goBackButton;
+    
+    @FXML
     private Button calculateEarningsButton;
 
     @FXML
@@ -28,6 +32,17 @@ public class EarningsController {
     	Factory.getInstance().setMonthlyContributions(Double.parseDouble(monthlyContributionAmount.getText()));
     	Factory.getInstance().setCompoundPeriod(compoundPeriodChoice.getValue());
     	app.earningsDashboardView();
+    }
+    
+    @FXML
+    void initialize() {
+    	String[] periods = {"Monthly", "Quarterly", "Semi-Annually", "Annually"};
+    	compoundPeriodChoice.setItems(FXCollections.observableArrayList(periods));
+    }
+    
+    @FXML
+    void goBack(ActionEvent event) {
+    	app.inputView();
     }
 
 }

@@ -7,6 +7,7 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import model.Factory;
 
 public class GoalsDashboardController {
 
@@ -47,7 +48,10 @@ public class GoalsDashboardController {
     
     @FXML
     void initialize() {
-    	
+    	userName.setText(Factory.getInstance().getName());
+    	goalAge.setText("" + Factory.getInstance().getEndingAge());
+    	goalSavingsAmount.setText("" + Factory.getInstance().getGoal());
+    	monthlyAmountNeeded.setText("" + Factory.getInstance().createGoals());
     }
 
 }

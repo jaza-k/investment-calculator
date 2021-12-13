@@ -83,15 +83,15 @@ public class Factory {
 		this.compoundPeriod = compoundPeriod;
 	}
 	
-	public Earnings createEarnings() {
+	public double createEarnings() {
 		Earnings earning = new Earnings(interest, startingAmount, monthlyContributions, compoundPeriod);
 		earning.yearsElapsed(currentAge, endingAge);
-		return earning;
+		return earning.calculateAnnualEarnings();
 	}
 	
-	public Goals createGoals() {
+	public double createGoals() {
 		Goals goal = new Goals(interest, startingAmount, this.goal);
 		goal.yearsElapsed(currentAge, endingAge);
-		return goal;
+		return goal.calcContributions();
 	}
 }

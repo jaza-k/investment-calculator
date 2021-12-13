@@ -16,14 +16,14 @@ import javafx.scene.layout.BorderPane;
 public class InvestmentApp extends Application {
 	Stage primaryStage;
 	
-	private void setupView() {
+	void setupView() {
 		FXMLLoader loader = new FXMLLoader();
 		Scene scene;
 		try {
 			Parent setupView = (Parent) loader.load(new FileInputStream("src/view/SetupView.fxml"));
 			SetupController setupController = loader.getController();
 			setupController.linkWithApplication(this);
-			scene = new Scene(setupView,500,200);
+			scene = new Scene(setupView,475,225);
 			primaryStage.setScene(scene);
 			primaryStage.show();		
 		} 
@@ -92,7 +92,7 @@ public class InvestmentApp extends Application {
 			root = (BorderPane)loader.load(new FileInputStream("src/view/EarningsDashboardView.fxml"));
 			EarningsDashboardController earningsDashboardController = loader.getController();
 			earningsDashboardController.linkWithApplication(this);
-	        scene = new Scene(root, 550,500);
+	        scene = new Scene(root, 550,550);
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
 		} catch (IOException e) {
@@ -108,7 +108,7 @@ public class InvestmentApp extends Application {
 			root = (BorderPane)loader.load(new FileInputStream("src/view/GoalsDashboardView.fxml"));
 			GoalsDashboardController goalsDashboardController = loader.getController();
 			goalsDashboardController.linkWithApplication(this);
-	        scene = new Scene(root, 550,500);
+	        scene = new Scene(root, 550,550);
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
 		} catch (IOException e) {

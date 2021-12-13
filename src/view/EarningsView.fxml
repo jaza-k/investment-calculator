@@ -5,12 +5,12 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="250.0" prefHeight="150.0" prefWidth="527.0" style="-fx-background-color: #040932;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="application.EarningsController">
+<BorderPane maxHeight="250.0" prefHeight="150.0" prefWidth="527.0" style="-fx-background-color: #040932;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EarningsController">
    <top>
       <Label alignment="TOP_LEFT" text="Just a couple more things..." textFill="#51cbff" BorderPane.alignment="TOP_LEFT">
          <BorderPane.margin>
@@ -24,13 +24,6 @@
          </padding>
       </Label>
    </top>
-   <bottom>
-      <Button fx:id="calculateEarningsButton" mnemonicParsing="false" onAction="#getEarningsDashboard" prefHeight="34.0" prefWidth="92.0" style="-fx-background-color: #35c1f8;" text="Calculate" textFill="WHITE" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets bottom="20.0" />
-         </BorderPane.margin>
-      </Button>
-   </bottom>
    <center>
       <BorderPane maxHeight="150.0" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <top>
@@ -69,4 +62,12 @@
          </center>
       </BorderPane>
    </center>
+   <bottom>
+      <AnchorPane prefHeight="76.0" prefWidth="527.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="calculateEarningsButton" layoutX="218.0" layoutY="21.0" mnemonicParsing="false" onAction="#getEarningsDashboard" prefHeight="34.0" prefWidth="92.0" style="-fx-background-color: #35c1f8;" text="Calculate" textFill="WHITE" />
+            <Button fx:id="goBackButton" layoutX="27.0" layoutY="28.0" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #35c1f8;" text="Go back" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </bottom>
 </BorderPane>
