@@ -95,10 +95,15 @@ public class Factory {
 		return goal.calcContributions();
 	}
 	
-	public double specificYear(int year) {
+	public double specificYearGoal(int year) {
 		Goals goal = new Goals(interest, startingAmount, this.goal);
 		goal.yearsElapsed(0, year);
 		return goal.calcContributions();
 	}
 	
+	public double specificYearEarnings() {
+		Earnings earning = new Earnings(interest, startingAmount, monthlyContributions, compoundPeriod);
+		earning.yearsElapsed(currentAge, endingAge);
+		return earning.calculateAnnualEarnings();
+	}
 }
