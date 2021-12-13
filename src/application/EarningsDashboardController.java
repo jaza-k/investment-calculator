@@ -74,7 +74,6 @@ public class EarningsDashboardController {
     	goalAge.setText("" + Creator.getInstance().getEndingAge());
     	amountSaved.setText("" + Creator.getInstance().createEarnings());
     	chartHelper();
-<<<<<<< HEAD
     }
     
     /** chartHelper() method
@@ -90,15 +89,6 @@ public class EarningsDashboardController {
     	}
     	this.lineChart.getData().add(data);
     	data.getNode().setStyle("-fx-stroke: #51cbff; ");
-=======
->>>>>>> 6256afbed6084e29ba8e795b3e03b355fc15a8b4
     }
     
-    private void chartHelper() {
-    	XYChart.Series<Number, Number> data = new Series<Number, Number>();
-    	for (int i = 0; i <= Creator.getInstance().getEndingAge() - Creator.getInstance().getCurrentAge(); i+=2) {
-    		data.getData().add(new Data<Number, Number>(i, Creator.getInstance().specificYearEarnings(i)));
-    	}
-    	this.lineChart.getData().add(data);
-    }
 }
