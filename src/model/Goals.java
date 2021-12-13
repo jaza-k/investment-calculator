@@ -6,7 +6,8 @@ import java.text.NumberFormat;
 /**
  * This class represents the retirement goal of the
  * users and calculates the monthly contributions
- * It is a child class to the Input class
+ * based on yearly compounding.
+ * <p>It is a child class to the Input class
  * 
  * @author Joshua Lee
  * @author Jaza Khan
@@ -60,8 +61,8 @@ public class Goals extends Input {
 	
 	/**
 	 * Calculates the monthly contributions the user need to contribute
-	 * in order to achieve their retirement goal amount
-	 * <p> (r(A - P(1 + r)<sup>t</sup>) + 1)/(1 + r)<sup>t</sup>
+	 * in order to achieve their retirement goal amount based on yearly compounding
+	 * <p> PMT = [r (FV - P(1 + r)<sup>t</sup>)] / [(1 + r)<sup>t</sup> - 1]
 	 * <br><br>
 	 * Precondition: InterestRate, TimeElapesed, currentSavings, goal are not null.
 	 * InterestRate is not -1 and timeElapsed is not odd
@@ -71,13 +72,16 @@ public class Goals extends Input {
 	 */
 	public double calcContributions() {
 		// calculates the accumulation a = (1 + r)^t
-		double accumulation = Math.pow((1 + (super.getInterestRate()/12)), super.getTimeElapsed() * 12);
+		double accumulation = Math.pow((1 + super.getInterestRate()), super.getTimeElapsed());
 		
 		// calculates the compound interest, P*a
 		double compoundInterest = super.getCurrentSavings() * accumulation;
+				
+		// calculates the total monthly contributions, (A - P*a)/((a - 1)/r)
+		double totalMonthlyContributions = (super.getInterestRate() * (goal - compoundInterest)) / (accumulation - 1);
 		
-		// calculates the monthly contributions, (r * (A - P*a) + 1)/a
-		double monthlyContributions = ((super.getInterestRate() * (goal - compoundInterest))/(accumulation - 1));
+		// calculates the monthly contributions
+		double monthlyContributions = totalMonthlyContributions/12;
 		
 		// round the number to two decimals
 		monthlyContributions = Math.round(monthlyContributions * 100.0) / 100.0;
