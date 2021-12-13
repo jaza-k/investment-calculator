@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
@@ -39,38 +38,38 @@
       </AnchorPane>
    </top>
    <bottom>
-      <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#goBack" prefHeight="29.0" prefWidth="86.0" style="-fx-background-color: #35c1f8; -fx-background-radius: 10;" text="Go back" BorderPane.alignment="CENTER">
+      <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#goBack" prefHeight="29.0" prefWidth="86.0" style="-fx-background-color: #35c1f8; -fx-background-radius: 10;" text="Go back" textFill="WHITE" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="20.0" top="20.0" />
          </BorderPane.margin>
       </Button>
    </bottom>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="369.0" prefWidth="448.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="94.0" layoutY="7.0" text="You will have saved $" textFill="WHITE" />
-            <Label fx:id="amountSaved" layoutX="220.0" layoutY="7.0" prefHeight="15.0" prefWidth="55.0" text="14,673" textFill="#51cbff">
+            <Label layoutX="79.0" layoutY="7.0" text="You will have saved $" textFill="WHITE" />
+            <Label fx:id="amountSaved" layoutX="205.0" layoutY="7.0" prefHeight="15.0" prefWidth="75.0" text="14,673" textFill="#51cbff">
                <padding>
                   <Insets left="3.0" />
                </padding>
             </Label>
-            <Label layoutX="269.0" layoutY="7.0" text="by " textFill="WHITE" />
-            <Label fx:id="goalAge" layoutX="287.0" layoutY="7.0" text="30" textFill="#51cbff" />
-            <Label layoutX="302.0" layoutY="7.0" text="years of age" textFill="WHITE">
+            <Label layoutX="271.0" layoutY="7.0" text="by " textFill="WHITE" />
+            <Label fx:id="goalAge" layoutX="289.0" layoutY="7.0" text="30" textFill="#51cbff" />
+            <Label layoutX="304.0" layoutY="7.0" text="years of age" textFill="WHITE">
                <padding>
                   <Insets left="4.0" />
                </padding>
             </Label>
-            <LineChart fx:id="lineChart" horizontalGridLinesVisible="false" layoutX="62.0" layoutY="40.0" legendVisible="false" prefHeight="329.0" prefWidth="377.0" style="-fx-background-color: white; -fx-background-radius: 10;" title="Your Investment">
+            <LineChart fx:id="lineChart" horizontalGridLinesVisible="false" layoutX="40.0" layoutY="40.0" legendVisible="false" prefHeight="329.0" prefWidth="377.0" style="-fx-background-color: white; -fx-background-radius: 10;" title="Your Investment" verticalGridLinesVisible="false">
               <xAxis>
-                <NumberAxis fx:id="yAxis" label="Amount" minorTickVisible="false" side="LEFT" tickLabelFill="#35c1f8">
+                <NumberAxis fx:id="yAxis" label="Time (years)" minorTickVisible="false" tickLabelFill="#35c1f8">
                      <tickLabelFont>
                         <Font size="13.0" />
                      </tickLabelFont>
                   </NumberAxis>
               </xAxis>
               <yAxis>
-                <NumberAxis fx:id="yAxis" label="Amount" minorTickVisible="false" side="LEFT" tickLabelFill="#35c1f8">
+                <NumberAxis fx:id="yAxis" label="Amount ($)" minorTickVisible="false" side="LEFT" tickLabelFill="#35c1f8">
                      <tickLabelFont>
                         <Font size="13.0" />
                      </tickLabelFont>
@@ -78,6 +77,9 @@
               </yAxis>
             </LineChart>
          </children>
+         <BorderPane.margin>
+            <Insets left="20.0" />
+         </BorderPane.margin>
       </AnchorPane>
    </center>
 </BorderPane>

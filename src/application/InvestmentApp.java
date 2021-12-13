@@ -170,7 +170,7 @@ public class InvestmentApp extends Application {
 			EarningsDashboardController earningsDashboardController = loader.getController();
 			// link application to controller
 			earningsDashboardController.linkWithApplication(this);
-	        scene = new Scene(root, 550,550);
+	        scene = new Scene(root, 500,550);
 	        // use the primaryStage instance variable to display scene
 	        primaryStage.setScene(scene);
 	        primaryStage.show();

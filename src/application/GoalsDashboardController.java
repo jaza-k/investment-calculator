@@ -48,11 +48,11 @@ public class GoalsDashboardController {
 
     //x axis of the line chart
     @FXML
-    private NumberAxis xAxis = new NumberAxis(0, Creator.getInstance().getEndingAge() - Creator.getInstance().getCurrentAge(), 2);
+    private NumberAxis xAxis;
 
     //y axis of the line chart
     @FXML
-    private NumberAxis yAxis = new NumberAxis(Creator.getInstance().getStartingAmount(), Creator.getInstance().getGoal(), (int) 0.1 * (Creator.getInstance().getGoal()));
+    private NumberAxis yAxis;
 
     //label showing the age of the user at cashout
     @FXML
@@ -104,6 +104,6 @@ public class GoalsDashboardController {
     	}
     	//set all the data on the line chart
     	this.lineChart.getData().add(data);
+    	data.getNode().setStyle("-fx-stroke: #51cbff; ");
     }
-
 }

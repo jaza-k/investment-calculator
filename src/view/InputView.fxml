@@ -94,7 +94,7 @@
                         <Insets bottom="20.0" left="100.0" />
                      </FlowPane.margin>
                   </Label>
-                  <Button fx:id="pickedGoalsButton" mnemonicParsing="false" onAction="#loadGoalView" prefHeight="38.0" prefWidth="438.0" style="-fx-background-color: #35c1f8; -fx-background-radius: 10;" text="Monthly contribution required to reach goal by retirement age" textFill="WHITE">
+                  <Button fx:id="pickedGoalsButton" mnemonicParsing="false" onAction="#loadGoalView" prefHeight="38.0" prefWidth="438.0" style="-fx-background-color: #35c1f8; -fx-background-radius: 10;" text="Monthly contribution required to reach a goal by retirement age" textFill="WHITE">
                      <FlowPane.margin>
                         <Insets bottom="10.0" right="20.0" />
                      </FlowPane.margin>
