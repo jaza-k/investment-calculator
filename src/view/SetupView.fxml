@@ -8,21 +8,21 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="150.0" maxWidth="500.0" prefHeight="150.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SetupController">
+<BorderPane maxHeight="235.0" maxWidth="500.0" prefHeight="150.0" prefWidth="516.0" style="-fx-background-color: #040932;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SetupController">
    <top>
-      <Label fx:id="title" text="Welcome to the Investment Tracker" textFill="#20037c" BorderPane.alignment="CENTER">
+      <Label fx:id="title" text="Welcome to the Investment Tracker" textFill="#51cbff" BorderPane.alignment="CENTER">
          <font>
             <Font size="20.0" />
          </font>
          <BorderPane.margin>
-            <Insets top="30.0" />
+            <Insets top="25.0" />
          </BorderPane.margin>
       </Label>
    </top>
    <center>
       <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Please enter your name:">
+            <Label text="Please enter your name:" textFill="WHITE">
                <BorderPane.margin>
                   <Insets top="20.0" />
                </BorderPane.margin>
@@ -44,7 +44,7 @@
    <bottom>
       <FlowPane prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Please enter your age:">
+            <Label text="Please enter your age:" textFill="WHITE">
                <FlowPane.margin>
                   <Insets right="15.0" />
                </FlowPane.margin>
@@ -52,9 +52,9 @@
                   <Insets left="95.0" />
                </padding></Label>
             <TextField fx:id="ageTextfield" prefWidth="50.0" promptText="Age" />
-            <Button fx:id="continueButton" mnemonicParsing="false" onAction="#loadInputView" text="Continue" textFill="#20037c">
+            <Button fx:id="continueButton" mnemonicParsing="false" onAction="#loadInputView" prefHeight="39.0" prefWidth="146.0" style="-fx-background-color: #51cbff;" text="Continue">
                <FlowPane.margin>
-                  <Insets left="230.0" top="30.0" />
+                  <Insets left="180.0" top="20.0" />
                </FlowPane.margin>
             </Button>
          </children>

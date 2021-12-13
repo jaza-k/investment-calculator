@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="363.0" prefHeight="363.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="application.InputController">
+<BorderPane maxHeight="471.0" prefHeight="471.0" prefWidth="649.0" style="-fx-background-color: #040932;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InputController">
    <top>
-      <Label fx:id="header" alignment="TOP_LEFT" text="Let's start by taking in some information" textFill="#20037c" BorderPane.alignment="CENTER">
+      <Label fx:id="header" alignment="TOP_LEFT" text="Let's start by taking in some information" textFill="#51cbff" BorderPane.alignment="TOP_LEFT">
          <font>
             <Font size="15.0" />
          </font>
          <BorderPane.margin>
             <Insets bottom="20.0" left="20.0" right="200.0" top="20.0" />
-         </BorderPane.margin>
+         </BorderPane.margin>#51cbff 
       </Label>
    </top>
+   <bottom>
+      <FlowPane prefHeight="114.0" prefWidth="649.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" text="Monthly contribution required to reach goal by retirement age">
+               <FlowPane.margin>
+                  <Insets right="20.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" text="Total amount of money saved by retirement age" />
+         </children>
+      </FlowPane>
+   </bottom>
 </BorderPane>
