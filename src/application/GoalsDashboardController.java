@@ -36,7 +36,7 @@ public class GoalsDashboardController {
     private NumberAxis xAxis = new NumberAxis(0, Creator.getInstance().getEndingAge() - Creator.getInstance().getCurrentAge(), 2);
 
     @FXML
-    private NumberAxis yAxis = new NumberAxis(Creator.getInstance().getStartingAmount(), Creator.getInstance().createGoals(), 0.1 * (Creator.getInstance().createGoals() - Creator.getInstance().getStartingAmount()));
+    private NumberAxis yAxis = new NumberAxis(Creator.getInstance().getStartingAmount(), Creator.getInstance().getGoal(), (int) 0.1 * (Creator.getInstance().getGoal()));
 
     @FXML
     private Label goalAge;
@@ -60,8 +60,10 @@ public class GoalsDashboardController {
     
     private void chartHelper() {
     	XYChart.Series<Number, Number> data = new Series<Number, Number>();
+    	Creator.getInstance().setMonthlyContributions(Creator.getInstance().createGoals());
+    	Creator.getInstance().setCompoundPeriod("Annually");
     	for (int i = 0; i <= Creator.getInstance().getEndingAge() - Creator.getInstance().getCurrentAge(); i+=2) {
-    		data.getData().add(new Data<Number, Number>(i, Creator.getInstance().specificYearGoal(i)));
+    		data.getData().add(new Data<Number, Number>(i, Creator.getInstance().specificYearEarnings(i)));
     	}
     	this.lineChart.getData().add(data);
     }
