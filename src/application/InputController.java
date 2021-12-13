@@ -5,32 +5,33 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import model.Factory;
+import model.*;
 
 public class InputController {
-	private static InvestmentApp app;
+	
+	static InvestmentApp app;
 
 	public void linkWithApplication(InvestmentApp app) {
 		InputController.app = app;
 	}
 
     @FXML
-    private Button GoalButton;
-
-    @FXML
     private TextField annualInterestTextfield;
 
     @FXML
-    private TextField currentSavingsTextfield;
-
-    @FXML
-    private Button earningsButton;
+    private Button pickedEarningsButton;
 
     @FXML
     private Label header;
 
     @FXML
     private TextField retirementCashOutAgeTextfield;
+
+    @FXML
+    private Button pickedGoalsButton;
+
+    @FXML
+    private TextField currentSavingsTextfield;
 
     @FXML
     void loadEarningsView(ActionEvent event) {
