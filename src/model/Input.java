@@ -112,5 +112,3 @@ public class Input {
 		timeElapsed = time;
 	}
 }
-
-
